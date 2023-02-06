@@ -1,5 +1,12 @@
-function isLoggedInAndSubscribed(logStatus, subStatus) {
-    return (logStatus === 'LOGGED_IN') || (subStatus === 'SUBSCRIBED')
+function getMax(arr) {
+    let largest = arr[0]
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i]
+        }
+        
+    }
+    return largest
 }
 
-console.log(isLoggedInAndSubscribed('LOGGED_OUT', 'UNSUBSCRIBED'))
+console.log(getMax([5, 100, 0]))
