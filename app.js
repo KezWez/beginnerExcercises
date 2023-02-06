@@ -1,12 +1,17 @@
-function getMax(arr) {
-    let largest = arr[0]
-    for (i = 0; i < arr.length; i++) {
-        if (arr[i] > largest) {
-            largest = arr[i]
+function showRating(rating) {
+    let ratings = ''
+    for (let i = 0; i < Math.floor(rating); i++) {
+        if (i === Math.floor(rating-1)) {
+            ratings += '*'
         }
-        
+        else {
+            ratings += '* '
+        }
+    }    
+    if (!Number.isInteger(rating)) {
+        ratings += ' .'
     }
-    return largest
+    return ratings
 }
 
-console.log(getMax([5, 100, 0]))
+console.log(showRating(4.5))
